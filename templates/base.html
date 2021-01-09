@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ws-net.ch</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap_4.5.3.min.css') }}">
+</head>
+<body>
+
+<div class='container-fluid'>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">ws-net.ch</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item {% block nav_services_class %}{% endblock %}">
+        <a class="nav-link" href="{{ url_for('services') }}">Services</a>
+      </li>
+      <li class="nav-item {% block nav_donate_class %}{% endblock %}">
+        <a class="nav-link" href="{{ url_for('donate') }}">Donate</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>{% block page_title %}{% endblock %}</h1>
+    <h2 class="lead">{% block page_sub_title %}{% endblock %}</h2>
+  </div>
+</div>
+    <div id="main">
+        <div class="content">
+            {% block page_content %}{% endblock %}
+            <hr>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/jquery_3.5.1.slim.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper_1.16.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap_4.5.3.min.js') }}"></script>
+
+</body>
+</html>

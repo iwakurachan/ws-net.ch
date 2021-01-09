@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block nav_donate_class %}active{% endblock %}
+{% block page_title %}Donate{% endblock %}
+{% block page_content %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Bitcoin(BTC)</h4>
+        <img width="150px" height="150px" src="{{ url_for('static', filename='img/qr_btc.png')}}">
+        <p class="card-text"><pre><code>bc1qlxqqs0h9ha7j2hnvegkg3ungsqtfnwaagpmedn</code></pre></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Monero(XMR)</h4>
+        <img width="150px" height="150px" src="{{ url_for('static', filename='img/qr_xmr.png')}}">
+        <p class="card-text"><pre><code>88NniMHCegC1xbVTVVyMwQiN59JQ79KyGWQDLsa2TpuzYuGeLmbnbayQqoStbCpf5B7GM9KeHgmvD1rEAJ7EqU48KU8oBYU</code></pre></p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ethereum(ETH) or other tokens</h4>
+        <img width="150px" height="150px" src="{{ url_for('static', filename='img/qr_eth.png')}}">
+        <p class="card-text"><pre><code>0x95B619CCdd55c67A9E08de8f7565B1f70E68c2Fc</code></pre></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
